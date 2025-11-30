@@ -11,7 +11,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Loader2, Film, Sparkles } from "lucide-react";
 import { getMovieImage, getMovieDetails, searchMoviesTMDB, getRecommendationsTMDB, getMoviesByActor } from "@/lib/tmdb";
 
-const API_URL = "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function App() {
   const [onboardingComplete, setOnboardingComplete] = useState(false);
