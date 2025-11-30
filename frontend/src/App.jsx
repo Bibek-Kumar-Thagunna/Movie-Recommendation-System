@@ -249,7 +249,7 @@ function App() {
       // For the modal "Similar Movies", we can also use the Hybrid approach!
       // Ask backend for titles similar to this movie
       const res = await axios.get(`${API_URL}/recommend_by_title`, {
-        params: { title: movie.title, k: 6 }
+        params: { title: movie.title, k: 12 }
       });
 
       const hydratedRecs = [];
