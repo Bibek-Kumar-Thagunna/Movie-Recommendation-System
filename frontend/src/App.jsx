@@ -385,7 +385,7 @@ function App() {
                   </DialogHeader>
                 </div>
 
-                <ScrollArea className="flex-1 p-6">
+                <div className="flex-1 p-6 overflow-y-auto">
                   <div className="space-y-6">
                     <div className="flex flex-wrap gap-2">
                       {selectedMovie.genre && (Array.isArray(selectedMovie.genre) ? selectedMovie.genre : []).map((g, i) => (
@@ -453,7 +453,7 @@ function App() {
                       )}
                     </div>
                   </div>
-                </ScrollArea>
+                </div>
               </div>
             </div>
           )}
