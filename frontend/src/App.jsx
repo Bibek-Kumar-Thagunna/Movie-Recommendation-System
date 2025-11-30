@@ -439,12 +439,13 @@ function App() {
                           <Loader2 className="h-8 w-8 animate-spin text-primary" />
                         </div>
                       ) : (
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
                           {recommendations.map((rec) => (
-                            <div key={rec.id} className="h-full">
+                            <div key={rec.id} className="w-[140px] flex-shrink-0">
                               <MovieCard
                                 movie={rec}
                                 onClick={() => handleMovieClick(rec)}
+                                className="w-full"
                               />
                             </div>
                           ))}
