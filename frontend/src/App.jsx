@@ -338,11 +338,9 @@ function App() {
 
       {/* Movie Details Dialog */}
       <Dialog open={!!selectedMovie} onOpenChange={(open) => !open && setSelectedMovie(null)}>
-        <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden flex flex-col p-0 gap-0 border-none bg-card/95 backdrop-blur-xl">
+        <DialogContent className="max-w-5xl h-[85vh] overflow-hidden flex flex-col p-0 gap-0 border-none bg-card/95 backdrop-blur-xl">
           {selectedMovie && (
-            <div className="flex flex-col md:flex-row h-full">
-              {/* Sidebar / Header Image */}
-              {/* Sidebar / Header Image */}
+            <div className="flex flex-col md:flex-row h-full min-h-0">
               {/* Sidebar / Header Image */}
               <div className="w-full md:w-[300px] h-60 md:h-auto relative bg-black flex-shrink-0 overflow-hidden group">
                 {selectedMovie.poster_path ? (
@@ -375,7 +373,7 @@ function App() {
               </div>
 
               {/* Content */}
-              <div className="flex-1 flex flex-col h-full overflow-hidden">
+              <div className="flex-1 flex flex-col h-full overflow-hidden min-h-0">
                 <div className="p-6 pb-0 hidden md:block">
                   <DialogHeader>
                     <DialogTitle className="text-3xl font-bold">{selectedMovie.title}</DialogTitle>
