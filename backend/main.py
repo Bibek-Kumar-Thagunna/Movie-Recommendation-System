@@ -39,6 +39,10 @@ async def log_requests(request: Request, call_next):
     response = await call_next(request)
     return response
 
+@app.get("/")
+async def root():
+    return {"status": "alive", "message": "Movie Recommender API is running"}
+
 # Global variables to hold model and data
 model = None
 movies_df = None
